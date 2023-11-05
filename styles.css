@@ -4,7 +4,7 @@
     --primary-light: #ededed;
     --secondary-light: #fefefe;
     --lightgray: lightgray;
-    --white: var(--white);
+    --white: white;
   }
 
 /* clear all default padding and margin */
@@ -53,6 +53,7 @@ body {
     width: 500px;
     height: 500px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--white);
 }
 
 .grid-item {

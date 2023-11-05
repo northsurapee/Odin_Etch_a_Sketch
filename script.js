@@ -49,7 +49,7 @@ function setCurrentMode(newMode) {
 function clearGrid() {
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach(gridItem => {
-        gridItem.style.backgroundColor = 'white';
+        gridItem.style.backgroundColor = '';
     });
 }
 
@@ -77,7 +77,7 @@ function changeColor(e) {
         if (currentMode === 'color') {
             e.target.style.backgroundColor = currentColor
         } else {
-            e.target.style.backgroundColor = 'white'
+            e.target.style.backgroundColor = ''
         }
     }   
 }
