@@ -1,0 +1,10 @@
+About Event Object (e)
+- 'e' is the event object, representing the event that occurred (in this case, a mousemove event).
+- 'e.target' is the element that triggered the event, which is the sizeSlider in this case.
+- 'e.target.value' is used to access the current value of the sizeSlider element, 
+  and this value is then passed to the updateSizeValue function to update the size value.
+
+About initial Setup
+window.onload = () => {
+    changeSize(DEFAULT_SIZE)
+}

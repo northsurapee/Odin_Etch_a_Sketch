@@ -9,14 +9,23 @@
 </head>
 <body>
     <div class="header">
-        <h1>Etch-a-Sketch</h1>
+        <h1>Etch-a-sketch</h1>
     </div>
     <div class="main">
         <div class="control">
-
+            <input id="colorPicker" type="color" value="#333333"> <!-- Color picker -->
+            <button id="colorBtn">Color</button>
+            <button id="eraserBtn">Eraser</button>
+            <button id="clearBtn">Clear</button>
+            <div class="size-container">
+                <p class="size-value", id="sizeValue">16 x 16</p>
+                <input id="sizeSlider", type="range", value="16", min="1", max="64"> <!-- Range Slider -->
+            </div>
         </div>
         <div class="grid-container">
-
+            <!-- 
+            <div class="grid-item"></div>
+            -->
         </div>
     </div>
     <script src="script.js" defer></script>

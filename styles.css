@@ -1,0 +1,123 @@
+/* DEFINE VARIABLE */
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+    --lightgray: lightgray;
+    --white: var(--white);
+  }
+
+/* clear all default padding and margin */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* WHOLE PAGE */
+body {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+    font-size: 36px;
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+.control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.grid-container {
+    /* attributes of grid display method */
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 500px;
+    height: 500px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.grid-item {
+    border: 0.5px solid var(--lightgray);
+}
+
+.size-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+button,
+input {
+  width: 100%; /* expand to match 100% of it container */
+  cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 5px;
+  }
+  
+/* hover   */  
+button:hover,
+input[type='color']:hover {
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1.05);
+}
+
+/* color picker : don't understand shit*/
+input[type='color']{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+input[type='color']::-webkit-color-swatch {
+    border-radius: 5px;
+    border: none
+}
+
+/* size range : this too*/
+input[type='range'] {
+    -webkit-appearance: none;
+    background-color: var(--primary-light);
+}
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 25px;
+    background: var(--secondary-light);
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -8px;
+    background: var(--primary-dark);
+}
